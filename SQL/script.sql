@@ -27,3 +27,28 @@ estado varchar(150),
 id_estadio int not null,
 constraint PK_Time primary key(id_time),
 constraint FK_EstadioTime foreign key(id_estadio) references estadio(id_estadio));
+
+create table jogador(
+    -> id_jogador int,
+    -> nome varchar(150),
+    -> numero int,
+    -> dt_nascimento date,
+    -> posicao varchar(150),
+    -> id_time int);
+
+create table partida(
+    -> id_partida int,
+    -> rodada int,
+    -> horario datetime,
+    -> gol_mandante int,
+    -> gol_visitante int,
+    -> id_mandante int,
+    -> id_visitante int,
+    -> id_estadio int);
+
+create table evento(
+    -> id_evento int,
+    -> minuto int,
+    -> descricao varchar(150),
+    -> id_partida int,
+    -> id_jogador int);
