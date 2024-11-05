@@ -41,3 +41,10 @@ CREATE TABLE Funcionarios (
     Salario DECIMAL(10, 2) NOT NULL DEFAULT 1510.00,
     PRIMARY KEY (Matricula)
 );
+
+-- Criação da tabela Consultas
+CREATE TABLE Consultas (
+    Codigo_Consulta INT NOT NULL AUTO_INCREMENT,
+    Data_Horario DATETIME,
+    PRIMARY KEY (Codigo_Consulta)
+);
